@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corvinus.WPF.Interactivity", "src\Corvinus.WPF.Interactivity\Corvinus.WPF.Interactivity.csproj", "{929C2DF0-C99F-411C-8779-2CB2E39412C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corvinus.WPF", "src\Corvinus.WPF\Corvinus.WPF.csproj", "{56512627-0E9E-4B49-9C30-2049E100BCC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{929C2DF0-C99F-411C-8779-2CB2E39412C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{929C2DF0-C99F-411C-8779-2CB2E39412C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{929C2DF0-C99F-411C-8779-2CB2E39412C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56512627-0E9E-4B49-9C30-2049E100BCC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56512627-0E9E-4B49-9C30-2049E100BCC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56512627-0E9E-4B49-9C30-2049E100BCC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56512627-0E9E-4B49-9C30-2049E100BCC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
