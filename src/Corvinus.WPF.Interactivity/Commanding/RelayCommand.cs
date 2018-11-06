@@ -1,4 +1,8 @@
-﻿namespace Corvinus.WPF.Interactivity.Commanding
+﻿// <copyright file="RelayCommand.cs" company="Corvinus Software">
+// Copyright (c) Corvinus Software. All rights reserved.
+// </copyright>
+
+namespace Corvinus.WPF.Interactivity.Commanding
 {
     using System;
     using System.Diagnostics;
