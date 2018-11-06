@@ -1,4 +1,8 @@
-﻿namespace Corvinus.WPF.Interactivity.Dependency
+﻿// <copyright file="DependencyTarget.cs" company="Corvinus Software">
+// Copyright (c) Corvinus Software. All rights reserved.
+// </copyright>
+
+namespace Corvinus.WPF.Interactivity.Dependency
 {
     using System.Windows;
     using System.Windows.Data;

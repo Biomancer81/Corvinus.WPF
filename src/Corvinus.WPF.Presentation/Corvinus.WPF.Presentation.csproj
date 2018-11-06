@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{56512627-0E9E-4B49-9C30-2049E100BCC3}</ProjectGuid>
+    <ProjectGuid>{23A390E9-63DB-43E4-8F61-BA60795DC931}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Corvinus.WPF</RootNamespace>
-    <AssemblyName>Corvinus.WPF</AssemblyName>
+    <RootNamespace>Corvinus.WPF.Presentation</RootNamespace>
+    <AssemblyName>Corvinus.WPF.Presentation</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -17,24 +17,32 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\lib\net472\Corvinus.WPF\$(Configuration)\</OutputPath>
+    <OutputPath>..\..\lib\net472\Corvinus.WPF.Presentation\$(Configuration)\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\lib\net472\Corvinus.WPF\$(Configuration)\</OutputPath>
+    <OutputPath>..\..\lib\net472\Corvinus.WPF.Presentation\$(Configuration)\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,10 +55,30 @@
     <Compile Include="..\..\shared\CorvinusAssemblyInfo.cs">
       <Link>Properties\CorvinusAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Controls\ImageButton.cs" />
+    <Compile Include="Controls\ImageTabItem.cs" />
+    <Compile Include="Controls\ImageToggleButton.cs" />
+    <Compile Include="Controls\RelativeAnimatingContentControl.cs" />
+    <Compile Include="Controls\WatermarkAdorner.cs" />
+    <Compile Include="Controls\WatermarkService.cs" />
+    <Compile Include="Converters\BoolConverter{T}.cs" />
+    <Compile Include="Converters\BoolToCollapsedConverter.cs" />
+    <Compile Include="Converters\BoolToHiddenConverter.cs" />
+    <Compile Include="Converters\TransitionHeightConverter.cs" />
+    <Compile Include="Converters\DateToTextConverter.cs" />
+    <Compile Include="Converters\FileSizeConverter.cs" />
+    <Compile Include="Converters\InverseBoolConverter.cs" />
+    <Compile Include="Converters\TransitionCenterConverter.cs" />
+    <Compile Include="Converters\TransitionInvertConverter.cs" />
+    <Compile Include="Converters\TransitionWidthConverter.cs" />
+    <Compile Include="Dialogs\FileDialogRenderer.cs" />
+    <Compile Include="Dialogs\IFileDialogRenderer.cs" />
+    <Compile Include="Extensions\FrameworkElementExtensions.cs" />
+    <Compile Include="Extensions\ObservableCollectionExtensions.cs" />
+    <Compile Include="Theme\ThemeEngine.cs" />
+    <Compile Include="ViewModeling\ViewModelBase.cs" />
+    <Compile Include="Windows\IWindowProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shell\ISingleInstanceApp.cs" />
-    <Compile Include="Shell\NativeMethods.cs" />
-    <Compile Include="Shell\SingleInstance.cs" />
   </ItemGroup>
   <ItemGroup>
     <AdditionalFiles Include="..\..\shared\stylecop.json">
@@ -64,6 +92,9 @@
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.0-beta009\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.0-beta009\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Theme\Skins\" />
+    <Folder Include="ViewModeling\Controls\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
