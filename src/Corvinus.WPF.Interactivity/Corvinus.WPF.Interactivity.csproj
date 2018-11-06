@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\lib\net72\Debug\</OutputPath>
+    <OutputPath>..\..\lib\net472\Corvinus.WPF.Interactivity\$(Configuration)\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,7 +26,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\lib\net72\Release\</OutputPath>
+    <OutputPath>..\..\lib\net472\Corvinus.WPF.Interactivity\$(Configuration)\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -52,6 +52,9 @@
       <Link>Properties\CorvinusAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Commanding\ClickCommands.cs" />
+    <Compile Include="Commanding\DataGridCommands.cs" />
+    <Compile Include="Commanding\RelayCommand.cs" />
+    <Compile Include="Commanding\RelayCommand{T}.cs" />
     <Compile Include="Dependency\DependencyTarget.cs" />
     <Compile Include="Dependency\ServiceProvider.cs" />
     <Compile Include="Events\EventDispatcher.cs" />
