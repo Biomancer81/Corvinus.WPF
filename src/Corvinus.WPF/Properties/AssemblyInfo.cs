@@ -15,7 +15,11 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyCulture("")]
 [assembly: AssemblyVersion("1.0.0.0")]
+#if DEBUG
 [assembly: AssemblyInformationalVersion("1.0.0-dev0")]
+#else
+[assembly: AssemblyInformationalVersion("1.0.0.0")]
+#endif
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
