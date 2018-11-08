@@ -14,13 +14,13 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Corvinus WPF Presentation Library")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.2.0")]
 #if DEBUG
-[assembly: AssemblyInformationalVersion("1.0.0-dev0")]
+[assembly: AssemblyInformationalVersion("1.0.2-dev0")]
 #else
-[assembly: AssemblyInformationalVersion("1.0.0.0")]
+[assembly: AssemblyInformationalVersion("1.0.2.0")]
 #endif
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.2.0")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from

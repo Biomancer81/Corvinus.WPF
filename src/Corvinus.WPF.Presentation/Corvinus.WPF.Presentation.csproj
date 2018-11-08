@@ -75,7 +75,9 @@
     <Compile Include="Dialogs\IFileDialogRenderer.cs" />
     <Compile Include="Extensions\FrameworkElementExtensions.cs" />
     <Compile Include="Extensions\ObservableCollectionExtensions.cs" />
-    <Compile Include="Theme\ThemeEngine.cs" />
+    <Compile Include="Theme\ThemeEngine.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="ViewModeling\ViewModelBase.cs" />
     <Compile Include="Windows\IWindowProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

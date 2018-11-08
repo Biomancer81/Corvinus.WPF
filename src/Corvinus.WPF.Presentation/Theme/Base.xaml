@@ -1,11 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Corvinus.WPF.Presentation.Theme"
-                    xmlns:cvt="clr-namespace:Corvinus.WPF.Presentation.Converters"
-                    xmlns:controls="clr-namespace:Corvinus.WPF.Presentation.Controls">
+                    xmlns:cvt="clr-namespace:Corvinus.WPF.Presentation.Converters;assembly=Corvinus.WPF.Presentation"
+                    xmlns:controls="clr-namespace:Corvinus.WPF.Presentation.Controls;assembly=Corvinus.WPF.Presentation">
 
     <!-- Converters -->
-    <cvt:BoolToVisibleConverter x:Key="boolToVisibleConverter" />
     <cvt:BoolToHiddenConverter x:Key="boolToHiddenConverter" />
     <cvt:BoolToCollapsedConverter x:Key="boolToCollapsedConverter" />
     <cvt:InverseBoolConverter  x:Key="inverseBoolConverter" />

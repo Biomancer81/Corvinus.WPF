@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
@@ -13,6 +13,10 @@
     <description>$description$</description>
     <releaseNotes>Initial Release.</releaseNotes>
     <copyright>Copyright 2018</copyright>
-    <tags>wPF Presentation Controls</tags>
+    <tags>WPF Presentation Controls</tags>
   </metadata>
+  <files>
+    <file src="Theme\**\*.xaml" target="content/Theme" />
+    <file src="Theme\*.xaml.cs" target="content/Theme" />
+  </files>
 </package>
