@@ -10,8 +10,8 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Corvinus.WPF")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyProduct("Corvinus.WPF")]
+[assembly: AssemblyDescription("Corvinus WPF Base Library")]
+[assembly: AssemblyProduct("Corvinus WPF Base Library")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyCulture("")]
 [assembly: AssemblyVersion("1.0.0.0")]

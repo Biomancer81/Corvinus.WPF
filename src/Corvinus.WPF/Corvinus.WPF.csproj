@@ -58,6 +58,7 @@
     </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Corvinus.WPF.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
