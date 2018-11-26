@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,94 +8,58 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Corvinus.WPF.Presentation</RootNamespace>
     <AssemblyName>Corvinus.WPF.Presentation</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworks>net472</TargetFrameworks>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <Authors>Biomancer81</Authors>
+    <Version>1.0.3</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Corvinus WPF Presentation Framework</Description>
+    <files>
+      <file src="Theme\**\*.xaml" target="content/Theme" />
+      <file src="Theme\*.xaml.cs" target="content/Theme" />
+    </files>
+    <Copyright>Copyright 2018 Biomancer81</Copyright>
+    <PackageProjectUrl>https://github.com/Biomancer81/Corvinus.WPF/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Biomancer81/Corvinus.WPF/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageIconUrl>https://github.com/Biomancer81/Corvinus/raw/master/shared/Corvinus-Logo.png</PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/Biomancer81/Corvinus.WPF/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\lib\net472\Corvinus.WPF.Presentation\$(Configuration)\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <LangVersion>latest</LangVersion>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\lib\$(Configuration)\Corvinus.WPF\</OutputPath>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\..\lib\net472\Corvinus.WPF.Presentation\$(Configuration)\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <LangVersion>latest</LangVersion>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\lib\$(Configuration)\Corvinus.WPF\</OutputPath>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="ViewModeling\Controls\TransitionPresenterViewModel.cs" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\shared\CorvinusAssemblyInfo.cs">
-      <Link>Properties\CorvinusAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="Controls\ImageButton.cs" />
-    <Compile Include="Controls\ImageTabItem.cs" />
-    <Compile Include="Controls\ImageToggleButton.cs" />
-    <Compile Include="Controls\RelativeAnimatingContentControl.cs" />
-    <Compile Include="Controls\WatermarkAdorner.cs" />
-    <Compile Include="Controls\WatermarkService.cs" />
-    <Compile Include="Converters\BoolConverter{T}.cs" />
-    <Compile Include="Converters\BoolToCollapsedConverter.cs" />
-    <Compile Include="Converters\BoolToHiddenConverter.cs" />
-    <Compile Include="Converters\TransitionHeightConverter.cs" />
-    <Compile Include="Converters\DateToTextConverter.cs" />
-    <Compile Include="Converters\FileSizeConverter.cs" />
-    <Compile Include="Converters\InverseBoolConverter.cs" />
-    <Compile Include="Converters\TransitionCenterConverter.cs" />
-    <Compile Include="Converters\TransitionInvertConverter.cs" />
-    <Compile Include="Converters\TransitionWidthConverter.cs" />
-    <Compile Include="Dialogs\FileDialogRenderer.cs" />
-    <Compile Include="Dialogs\IFileDialogRenderer.cs" />
-    <Compile Include="Extensions\FrameworkElementExtensions.cs" />
-    <Compile Include="Extensions\ObservableCollectionExtensions.cs" />
-    <Compile Include="Theme\ThemeEngine.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="ViewModeling\ViewModelBase.cs" />
-    <Compile Include="Windows\IWindowProvider.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <AdditionalFiles Include="..\..\shared\stylecop.json">
       <Link>stylecop.json</Link>
     </AdditionalFiles>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.0-beta009\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
-    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.0-beta009\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta009">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Theme\Skins\" />
     <Folder Include="ViewModeling\Controls\" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,66 +1,111 @@
-﻿namespace Microsoft.Manufacturing.UI.WPF.Common.ViewModels.Controls
+﻿// <copyright file="TransitionPresenterViewModel.cs" company="Corvinus Software">
+// Copyright (c) Corvinus Software. All rights reserved.
+// </copyright>
+
+namespace Microsoft.Manufacturing.UI.WPF.Common.ViewModels.Controls
 {
-
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Windows.Media.Animation;
     using System.Windows;
+    using Corvinus.WPF.Presentation.ViewModeling;
 
+    /// <summary>
+    /// New Transition Presenter View Model.
+    /// </summary>
+    /// <seealso cref="Corvinus.WPF.Presentation.ViewModeling.ViewModelBase" />
     public class TransitionPresenterViewModel : ViewModelBase
     {
+        private double width;
+        private double height;
+        private Thickness thicknessIn;
+        private Thickness thicknessOut;
 
-        private double _width;
-        private double _height;
-        private Thickness _thicknessIn;
-        private Thickness _thicknessOut;
-
+        /// <summary>
+        /// Gets or sets the width.
+        /// </summary>
+        /// <value>
+        /// The width.
+        /// </value>
         public double Width
         {
-            get { return _width; }
+            get
+            {
+                return this.width;
+            }
+
             set
             {
-                _width = value;
-                SetThickness();
-                OnPropertyChanged("Width");
+                this.width = value;
+                this.SetThickness();
+                this.OnPropertyChanged("Width");
             }
         }
 
+        /// <summary>
+        /// Gets or sets the height.
+        /// </summary>
+        /// <value>
+        /// The height.
+        /// </value>
         public double Height
         {
-            get { return _height; }
+            get
+            {
+                return this.height;
+            }
+
             set
             {
-                _height = value;
-                OnPropertyChanged("Height");
+                this.height = value;
+                this.OnPropertyChanged("Height");
             }
         }
 
+        /// <summary>
+        /// Gets or sets the thickness in.
+        /// </summary>
+        /// <value>
+        /// The thickness in.
+        /// </value>
         public Thickness ThicknessIn
         {
-            get { return _thicknessIn; }
+            get
+            {
+                return this.thicknessIn;
+            }
+
             set
             {
-                _thicknessIn = value;
-                OnPropertyChanged("ThicknessIn");
+                this.thicknessIn = value;
+                this.OnPropertyChanged("ThicknessIn");
             }
         }
 
+        /// <summary>
+        /// Gets or sets the thickness out.
+        /// </summary>
+        /// <value>
+        /// The thickness out.
+        /// </value>
         public Thickness ThicknessOut
         {
-            get { return _thicknessOut; }
+            get
+            {
+                return this.thicknessOut;
+            }
+
             set
             {
-                _thicknessOut = value;
-                OnPropertyChanged("ThicknessOut");
+                this.thicknessOut = value;
+                this.OnPropertyChanged("ThicknessOut");
             }
         }
 
+        /// <summary>
+        /// Sets the thickness.
+        /// </summary>
         private void SetThickness()
         {
-            Thickness tIn = new Thickness();
-            Thickness tOut = new Thickness();
+            Thickness tIn = default(Thickness);
+            Thickness tOut = default(Thickness);
 
             tIn.Left += this.Width;
             tIn.Top = 0;

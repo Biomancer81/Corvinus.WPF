@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,76 +8,47 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Corvinus.WPF.Interactivity</RootNamespace>
     <AssemblyName>Corvinus.WPF.Interactivity</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworks>net472</TargetFrameworks>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\lib\net472\Corvinus.WPF.Interactivity\$(Configuration)\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <LangVersion>latest</LangVersion>
+    <Authors>Biomancer81</Authors>
+    <Version>1.0.1</Version>
+    <Description>Corvinus WPF Interactivity Framework</Description>
+    <PackageLicenseUrl>https://github.com/Biomancer81/Corvinus.WPF/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/Biomancer81/Corvinus.WPF/</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Biomancer81/Corvinus.WPF/</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/Biomancer81/Corvinus/raw/master/shared/Corvinus-Logo.png</PackageIconUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Copyright 2018 Biomancer81</Copyright>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\..\lib\net472\Corvinus.WPF.Interactivity\$(Configuration)\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <LangVersion>latest</LangVersion>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\lib\$(Configuration)\Corvinus.WPF\</OutputPath>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Windows" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\shared\CorvinusAssemblyInfo.cs">
-      <Link>Properties\CorvinusAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="Commanding\ClickCommands.cs" />
-    <Compile Include="Commanding\DataGridCommands.cs" />
-    <Compile Include="Commanding\RelayCommand.cs" />
-    <Compile Include="Commanding\RelayCommand{T}.cs" />
-    <Compile Include="Dependency\DependencyTarget.cs" />
-    <Compile Include="Dependency\ServiceProvider.cs" />
-    <Compile Include="Events\EventDispatcher.cs" />
-    <Compile Include="Events\IEventDispatcher.cs" />
-    <Compile Include="Events\IEventPublisher.cs" />
-    <Compile Include="Events\IEventSubscriber.cs" />
-    <Compile Include="Extensions\EventSenderExtension.cs" />
-    <Compile Include="Extensions\MethodBindingExtension.cs" />
-    <Compile Include="Dependency\PropertyPathHelpers.cs" />
-    <Compile Include="Extensions\EventArgsExtension.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\lib\$(Configuration)\Corvinus.WPF\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net47'">
+    <DefineConstants>NET47;NETFULL</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <AdditionalFiles Include="..\..\shared\stylecop.json">
       <Link>stylecop.json</Link>
     </AdditionalFiles>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.0-beta009\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
-    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.0-beta009\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta009">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
 </Project>
