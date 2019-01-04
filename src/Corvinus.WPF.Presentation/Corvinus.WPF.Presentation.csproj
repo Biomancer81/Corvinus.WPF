@@ -12,7 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <Authors>Biomancer81</Authors>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Corvinus WPF Presentation Framework</Description>
     <files>
@@ -25,7 +25,9 @@
     <RepositoryType>git</RepositoryType>
     <PackageIconUrl>https://github.com/Biomancer81/Corvinus/raw/master/shared/Corvinus-Logo.png</PackageIconUrl>
     <PackageLicenseUrl>https://github.com/Biomancer81/Corvinus.WPF/blob/master/LICENSE</PackageLicenseUrl>
-    <Company>Corvinus Collective</Company>
+    <Company>Biomancer81</Company>
+    <AssemblyVersion>1.0.5.0</AssemblyVersion>
+    <FileVersion>1.0.5.0</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <OutputPath>..\..\lib\$(Configuration)\Corvinus.WPF\</OutputPath>
@@ -37,9 +39,6 @@
     <Compile Remove="ViewModeling\Controls\TransitionPresenterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -51,7 +50,6 @@
     <AdditionalFiles Include="..\..\shared\stylecop.json">
       <Link>stylecop.json</Link>
     </AdditionalFiles>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
