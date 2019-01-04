@@ -13,7 +13,7 @@
     <Deterministic>true</Deterministic>
     <LangVersion>latest</LangVersion>
     <Authors>Biomancer81</Authors>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Description>Corvinus WPF Interactivity Framework</Description>
     <PackageLicenseUrl>https://github.com/Biomancer81/Corvinus.WPF/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/Biomancer81/Corvinus.WPF/</RepositoryUrl>
@@ -22,6 +22,7 @@
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>Copyright 2018 Biomancer81</Copyright>
+    <Company>Corvinus Collective</Company>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <OutputPath>..\..\lib\$(Configuration)\Corvinus.WPF\</OutputPath>

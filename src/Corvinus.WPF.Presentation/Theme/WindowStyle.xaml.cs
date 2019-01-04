@@ -1,5 +1,5 @@
-﻿// <copyright file="WindowStyle.xaml.cs" company="Microsoft Corporation">
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// <copyright file="WindowStyle.xaml.cs" company="Corvinus Collective">
+// Copyright (c) Corvinus Collective. All rights reserved.
 // </copyright>
 
 namespace Microsoft.Manufacturing.UI.WPF.Common.Theme

@@ -1,5 +1,5 @@
-﻿// <copyright file="NativeMethods.cs" company="Corvinus Software">
-// Copyright (c) Corvinus Software. All rights reserved.
+﻿// <copyright file="NativeMethods.cs" company="Corvinus Collective">
+// Copyright (c) Corvinus Collective. All rights reserved.
 // </copyright>
 
 namespace Microsoft.Shell

@@ -4,7 +4,7 @@
 
 using System.Reflection;
 
-[assembly: AssemblyCompany("Corvinus Software")]
+[assembly: AssemblyCompany("Corvinus Collective")]
 [assembly: AssemblyTrademark("")]
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]

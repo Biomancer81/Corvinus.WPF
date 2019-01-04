@@ -1,5 +1,5 @@
-﻿// <copyright file="IEventSubscriber.cs" company="Corvinus Software">
-// Copyright (c) Corvinus Software. All rights reserved.
+﻿// <copyright file="IEventSubscriber.cs" company="Corvinus Collective">
+// Copyright (c) Corvinus Collective. All rights reserved.
 // </copyright>
 
 namespace Corvinus.WPF.Interactivity.Events

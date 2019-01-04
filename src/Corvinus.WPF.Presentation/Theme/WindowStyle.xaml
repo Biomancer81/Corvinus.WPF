@@ -4,7 +4,7 @@
                     xmlns:controls="clr-namespace:Corvinus.WPF.Presentation.Controls;assembly=Corvinus.WPF.Presentation">
 
     <!-- Window Style-->
-    <Style x:Key="MTEWindowStyle" TargetType="{x:Type Window}">
+    <Style x:Key="DefaultWindowStyle" TargetType="{x:Type Window}">
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
                 <WindowChrome CaptionHeight="30"
